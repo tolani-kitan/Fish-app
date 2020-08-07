@@ -10,7 +10,7 @@ const AddFish = () => {
             console.log("heyyy");
             try {
                 const body = { name, type}
-                const fetchApi = await fetch("http://localhost:3040/fishes", {
+                const fetchApi = await fetch("/fishes", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

@@ -21,7 +21,7 @@ const FishList = () => {
 
     const getFish = async () => {
         try {
-            const getFishes = await fetch ("http://localhost:3040/fishes")
+            const getFishes = await fetch ("/fishes")
             const data = await getFishes.json()
             setFishes(data);
         }

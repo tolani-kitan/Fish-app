@@ -9,7 +9,7 @@ const FishItem = ({fish}) => {
         
         const deleteFish = async (id) => {
             try {
-                const fetchId = await fetch(`http://localhost:3040/fishes/${id}`, {
+                const fetchId = await fetch(`/fishes/${id}`, {
                     method: "DELETE"
                 })
                 setFishes(fishes.filter(fish => fish.id !== id ))
@@ -22,7 +22,7 @@ const FishItem = ({fish}) => {
             e.preventDefault()
         const body = {name, type}        
         try {
-            const fetchFish = await fetch(`http://localhost:3040/fishes/${fish.id}`, {
+            const fetchFish = await fetch(`/fishes/${fish.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
